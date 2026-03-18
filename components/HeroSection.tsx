@@ -14,7 +14,7 @@ export function HeroSection() {
       <div className="ticker-tape font-mono text-sm font-bold w-full overflow-hidden flex whitespace-nowrap">
         <div
           className="flex gap-12 w-max px-4 py-2"
-          style={{ animation: "marquee 20s linear infinite" }}
+          style={{ animation: "marquee 40s linear infinite" }}
         >
           {Array.from({ length: 24 }).map((_, i) => (
             <span key={i} className="shrink-0 flex gap-12">
