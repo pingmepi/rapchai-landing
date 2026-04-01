@@ -42,7 +42,7 @@ export function Footer() {
         >
           <div className="flex items-center gap-3 mb-4">
             <div style={{ width: 64, height: 64, flexShrink: 0 }}>
-              <img src="/logo.png?v=2" alt="Rapchai" width={64} height={64} style={{ objectFit: "contain", width: "100%", height: "100%" }} />
+              <Image src="/logo.png" alt="Rapchai logo" width={64} height={64} style={{ objectFit: "contain", width: "100%", height: "100%" }} />
             </div>
             <span style={{ fontWeight: 900, fontSize: "1.6rem", letterSpacing: "-0.04em", color: "#f5f0e8" }}>
               Rapchai
@@ -91,7 +91,7 @@ export function Footer() {
           </h3>
           <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
             {[
-              { label: "Food & Café", href: "https://rapchai.com/food" },
+              { label: "Food & Café", href: "https://wa.me/918792896633?text=Hi%20Rapchai!%20I%27d%20like%20to%20order%20food." },
               { label: "Communities", href: "https://mythirdplace.rapchai.com" },
               { label: "Events", href: "https://mythirdplace.rapchai.com" },
             ].map(({ label, href }) => (

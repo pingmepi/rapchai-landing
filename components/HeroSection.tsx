@@ -1,11 +1,12 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight, Coffee, Tent } from "lucide-react";
 
 const words = ["recharge.", "adapt.", "prosper."];
-const wordColors = ["var(--yellow)", "var(--pink)", "var(--cyan)"];
+const wordColors = ["var(--secondary)", "var(--pink)", "var(--cyan)"];
 
 export function HeroSection() {
   return (
@@ -42,10 +43,6 @@ export function HeroSection() {
           transition={{ duration: 0.5, ease: "easeOut" }}
           className="flex flex-col justify-center pr-0 md:pr-10 py-4"
         >
-          <div className="brut-tag mb-5 self-start" style={{ fontSize: "0.8rem" }}>
-            BANGALORE, INDIA
-          </div>
-
           <h1
             style={{
               fontSize: "clamp(3rem, 9vw, 7rem)",
@@ -112,8 +109,10 @@ export function HeroSection() {
               Explore Communities
               <ArrowRight size={16} />
             </Link>
-            <Link
-              href="https://rapchai.com/food"
+            <a
+              href="https://wa.me/918792896633?text=Hi%20Rapchai!%20I%27d%20like%20to%20order%20food."
+              target="_blank"
+              rel="noopener noreferrer"
               className="brut-btn"
               style={{
                 background: "var(--primary)",
@@ -125,7 +124,7 @@ export function HeroSection() {
             >
               <Coffee size={18} />
               Order Food
-            </Link>
+            </a>
           </div>
         </motion.div>
 
@@ -140,15 +139,15 @@ export function HeroSection() {
             className="brut-card-lg w-full flex flex-col overflow-hidden"
             style={{ background: "var(--primary)", minHeight: 400 }}
           >
-            <div
-              style={{
-                flex: 1,
-                backgroundImage:
-                  "url(https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=2694&auto=format&fit=crop)",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
-            />
+            <div style={{ flex: 1, position: "relative" }}>
+              <Image
+                src="/images/cafe/seating-garden-view.jpg"
+                alt="Rapchai café seating area with garden view in Bangalore"
+                fill
+                style={{ objectFit: "cover" }}
+                priority
+              />
+            </div>
             <div
               style={{
                 borderTop: "2.5px solid var(--border)",
@@ -160,7 +159,7 @@ export function HeroSection() {
               }}
             >
               <span style={{ fontWeight: 800, fontSize: "0.85rem", color: "#1a1a1a" }}>
-                RAPCHAI CAFÉ · HSR LAYOUT
+                RAPCHAI CAFÉ · KORAMANGALA
               </span>
               <span style={{ fontWeight: 700, fontSize: "0.75rem", color: "#1a1a1a" }}>
                 OPEN NOW →

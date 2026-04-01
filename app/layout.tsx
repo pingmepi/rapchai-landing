@@ -68,6 +68,33 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  name: "Rapchai",
+  description:
+    "A café and community space in Bangalore where people gather over food, culture, and ideas.",
+  url: "https://rapchai.com",
+  telephone: "+918792896633",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress:
+      "86/7, KR Gardens 2nd main road, Koramangala 8th Block",
+    addressLocality: "Bengaluru",
+    addressRegion: "Karnataka",
+    postalCode: "560095",
+    addressCountry: "IN",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 12.9352,
+    longitude: 77.6245,
+  },
+  image: "https://rapchai.com/images/cafe/seating-garden-view.jpg",
+  servesCuisine: "Café",
+  priceRange: "$$",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -75,6 +102,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body
         className={`${sans.variable} ${mono.variable} antialiased`}
         style={{ background: "var(--background)", color: "var(--foreground)" }}

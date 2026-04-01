@@ -31,7 +31,7 @@ export function ExperienceSplit() {
               position: "absolute",
               inset: 0,
               backgroundImage:
-                "url(https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=2694&auto=format&fit=crop)",
+                "url(/images/cafe/interior-day.jpg)",
               backgroundSize: "cover",
               backgroundPosition: "center",
               opacity: 0.2,
@@ -70,8 +70,10 @@ export function ExperienceSplit() {
             </p>
           </div>
           <div style={{ position: "relative", zIndex: 1, padding: "0 32px 32px" }}>
-            <Link
-              href="https://rapchai.com/food"
+            <a
+              href="https://wa.me/918792896633?text=Hi%20Rapchai!%20I%27d%20like%20to%20order%20food."
+              target="_blank"
+              rel="noopener noreferrer"
               className="brut-btn"
               style={{
                 background: "var(--primary)",
@@ -83,7 +85,7 @@ export function ExperienceSplit() {
             >
               View Menu
               <ArrowRight size={16} />
-            </Link>
+            </a>
           </div>
         </motion.div>
 
@@ -101,7 +103,7 @@ export function ExperienceSplit() {
               position: "absolute",
               inset: 0,
               backgroundImage:
-                "url(https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=2670&auto=format&fit=crop)",
+                "url(/images/branding/wall-graffiti-posters.jpg)",
               backgroundSize: "cover",
               backgroundPosition: "center",
               opacity: 0.2,
